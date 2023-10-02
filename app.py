@@ -24,7 +24,7 @@ def del_data():
     database.pop(value)
     return f"{value} deleted"
 
-@app.route('/updatedata/',methods = ['GET', 'PUT'])
+@app.route('/updatedata/',methods = ['GET','PUT'])
 def update_data():
     key,value = list(request.args.items())[0]
     if key in database:
